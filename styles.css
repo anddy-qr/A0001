@@ -8,12 +8,12 @@
   src: url('fuente2.ttf') format('truetype');
 }
 
-/* FONDO general: cambia los tres colores del degradado */
+/* FONDO general: colores de referencia */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #0a0f1e, #111827, #1a2540);
   color: #ffffff;
   letter-spacing: 1px;
   overflow-x: hidden;
@@ -66,7 +66,7 @@ body {
   height: min(350px, 85vw);
   object-fit: cover;
   border-radius: 50%;       /* FORMA: 50% círculo, 0% cuadrado */
-  border: 4px solid rgba(255,255,255,0.4); /* BORDE de la foto */
+  border: 4px solid rgba(255,255,255,0.5); /* BORDE de referencia */
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
@@ -78,7 +78,7 @@ body {
   text-align: center;
 }
 
-/* BOTONES: cambia ancho, redondez, fondo y tamaño del texto */
+/* BOTONES: colores de referencia */
 .btn {
   position: relative;
   overflow: hidden;
@@ -88,7 +88,7 @@ body {
   margin: 12px auto;
   padding: 14px;
   border-radius: 16px; /* REDONDEZ de las esquinas */
-  background: rgba(255,255,255,0.22); /* COLOR y transparencia del fondo */
+  background: rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.25);
   color: white; /* COLOR del texto */
@@ -105,7 +105,7 @@ body {
 /* EFECTO al pasar el cursor */
 .btn:hover { transform: translateY(-2px); }
 
-/* LUZ de los botones: cambia el color y la velocidad */
+/* LUZ de los botones: reflejo blanco de referencia */
 .btn::before {
   content: "";
   position: absolute;
@@ -113,7 +113,7 @@ body {
   left: -100%;
   width: 60%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(0, 200, 255, 0.45), transparent);
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
   animation: ondaLuz 4s infinite; /* VELOCIDAD: menos segundos, más rápido */
 }
 
