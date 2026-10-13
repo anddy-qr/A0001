@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TÍTULO de la página -->
+  <title>Identificación QR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- ARCHIVO de estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- FUENTES: fuente1 para el mensaje y fuente2 para el nombre. Se configuran en styles.css -->
+<body class="usar-fuente1-mensaje usar-fuente2-nombre">
+  <div class="header">
+  </div>
+    
+  <!-- MENSAJE y NOMBRE del cliente -->
+  <div class="nombre-container">
+    <h2 id="mensaje">AYUDAME A REGRESAR A CASA</h2>
+
+    <h2 id="nombre">RONEL KILER JAVIER CAQUI</h2>
+  </div>
+
+  <!-- FOTO del cliente: cambia foto.jpg por el nombre de tu imagen -->
+  <div id="clienteFotoContainer">
+    <img id="clienteFoto" src="foto.jpg" alt="">
+  </div>
+
+  <!-- BOTONES de contacto y registro -->
+  <div class="container">
+
+    <!-- WHATSAPP: cambia el número y el mensaje por los del cliente -->
+    <a class="btn"
+       href="https://wa.me/51999999999?text=Hola%20encontre%20tu%20objeto"
+       target="_blank"
+       rel="noopener noreferrer">
+       💬 Escríbeme por WhatsApp
+    </a>
+
+    <!-- REGISTRO: revisa el enlace, el ID y los campos que se enviarán -->
+    <a class="btn btn-secundario"
+       href="https://wa.me/registrarQR?text=Hola%20quiero%20registrar%20mi%20QR
+       %0AID:A0001 ¿no borrar este ID?
+       %0ANOMBRE:
+       %0AN⁰WSP:
+       %0AFOTO:"
+       target="_blank"
+       rel="noopener noreferrer">
+       ⚙️ Registrar mi QR
+    </a>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* FUENTES: reemplaza fuente1.ttf y fuente2.ttf por tus archivos .ttf */
+@font-face {
+  font-family: 'fuente1';
+  src: url('fuente1.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'fuente2';
+  src: url('fuente2.ttf') format('truetype');
+}
+
+/* FONDO general: cambia los tres colores del degradado */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  letter-spacing: 1px;
+  overflow-x: hidden;
+}
+
+/* FUENTES: activa o desactiva estas clases en el body de index.html */
+.usar-fuente1-mensaje #mensaje { font-family: 'fuente1', sans-serif; }
+.usar-fuente2-nombre #nombre { font-family: 'fuente2', sans-serif; }
+
+/* cambia la altura y el logo */
+.header {
+  text-align: center;
+  height: 80px; /* ALTURA de la logo */
+  background-image: url('logo.jpg'); /* LOGO: nombre de la imagen */
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+}
+
+/* MENSAJE y NOMBRE: cambia tamaño, color y posición */
+.nombre-container { padding: 10px 15px; }
+
+#mensaje {
+  text-align: center;
+  font-size: 0.9em; /* TAMAÑO del mensaje */
+  margin: -5px 0 20px;
+  line-height: 1.2;
+  color: #ffffff; /* COLOR del mensaje */
+}
+
+#nombre {
+  text-align: center;
+  font-size: 1.5em; /* TAMAÑO del nombre */
+  margin: 10px 0;
+  line-height: 1.4;
+  color: #ffffff; /* COLOR del nombre */
+  transform: translateY(-20px); /* POSICIÓN vertical del nombre */
+}
+
+/* FOTO: cambia el tamaño, la forma y la posición */
+#clienteFotoContainer {
+  text-align: center;
+  margin: -30px 0 15px; /* POSICIÓN vertical de la foto */
+}
+
+#clienteFoto {
+  width: min(350px, 85vw);  /* TAMAÑO de la foto */
+  height: min(350px, 85vw);
+  object-fit: cover;
+  border-radius: 50%;       /* FORMA: 50% círculo, 0% cuadrado */
+  border: 4px solid rgba(255,255,255,0.4); /* BORDE de la foto */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* BOTONES: ancho máximo y separación */
+.container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 0 20px 40px;
+  text-align: center;
+}
+
+/* BOTONES: cambia ancho, redondez, fondo y tamaño del texto */
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-width: 260px;   /* ANCHO máximo del botón */
+  margin: 12px auto;
+  padding: 14px;
+  border-radius: 16px; /* REDONDEZ de las esquinas */
+  background: rgba(255,255,255,0.22); /* COLOR y transparencia del fondo */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white; /* COLOR del texto */
+  font-size: 0.95em;  /* TAMAÑO del texto */
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+}
+
+/* BOTÓN secundario: transparencia y tamaño del texto */
+.btn-secundario { opacity: 0.75; font-size: 0.9em; }
+
+/* EFECTO al pasar el cursor */
+.btn:hover { transform: translateY(-2px); }
+
+/* LUZ de los botones: cambia el color y la velocidad */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0, 200, 255, 0.45), transparent);
+  animation: ondaLuz 4s infinite; /* VELOCIDAD: menos segundos, más rápido */
+}
+
+@keyframes ondaLuz {
+  0%   { left: -100%; }
+  60%  { left: 120%; }
+  100% { left: 120%; }
+}
